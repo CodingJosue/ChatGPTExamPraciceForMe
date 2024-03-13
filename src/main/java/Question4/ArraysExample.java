@@ -113,8 +113,8 @@ public class ArraysExample {
         for(i = 0, v = arrays.length - 1; i < arrays.length; i++,v-- ){
 
             for(int j = 0; j < arrays[i].length; j++ ){
-                if(j == i || j ==v){
-                    System.out.print(arrays[i][j] + " ");
+                if(j == i ){
+                    System.out.print(arrays[i][j] + " " + arrays[v][j]);
                 }else System.out.print(" ");
             }
             System.out.println();
