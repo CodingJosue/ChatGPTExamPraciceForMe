@@ -9,6 +9,10 @@ public class Habitat {
             animal.makeSound();
             System.out.println(" ");
             animal.sleep();
+
+            if(animal instanceof Migrate){
+                ((Migrate) animal).migrate();
+            }
         }
     }
 
