@@ -11,6 +11,8 @@ public class ArraysPatternExamples {
         topRightBottomleftSum(arrays);
 
         topLeftBottomRight(arrays);
+
+        reverseTopLeftBottomRight(arrays);
     }
 
     public static void topRightBottomleftSum(int[][] arrays) {
@@ -40,5 +42,14 @@ public class ArraysPatternExamples {
             }
         }
         System.out.println(sumOfThat );
+    }
+    public static void reverseTopLeftBottomRight(int[][] arrays){
+        int suumOfThat = 0;
+        for(int i = arrays.length - 1; i >= 0; i-- ){
+            for(int j = 0; j < arrays.length; j++){
+                if(Math.abs(i - j) == arrays.length - 1 || (i + j) == arrays.length - 1) suumOfThat += arrays[i][j];
+            }
+        }
+        System.out.println(suumOfThat);
     }
 }
