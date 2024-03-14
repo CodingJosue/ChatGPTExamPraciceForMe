@@ -10,7 +10,7 @@ public class ArraysPatternExamples {
         };
         topRightBottomleftSum(arrays);
 
-
+        topLeftBottomRight(arrays);
     }
 
     public static void topRightBottomleftSum(int[][] arrays) {
@@ -31,5 +31,14 @@ public class ArraysPatternExamples {
             }
         }
         System.out.println(inverseDiagonalSum);
+    }
+    public static void topLeftBottomRight(int[][] arrays){
+        int sumOfThat = 0;
+        for(int i = 0;  i < arrays.length; i++ ){
+            for (int j = arrays.length - 1; j >= 0; j--){
+                if((i + j )== arrays.length - 1) sumOfThat+= arrays[i][j];
+            }
+        }
+        System.out.println(sumOfThat );
     }
 }
