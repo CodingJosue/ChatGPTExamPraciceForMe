@@ -11,9 +11,8 @@ public class RandomExcercises {
         while ((line = bufferedReader.readLine()) != null) {
             if (!(line.trim().isEmpty() || line.trim().isBlank())) {
                 String cleanLine = line.replaceAll("[^a-zA-Z0-9]", "");
-                bufferedWriter.write(cleanLine + "\n");
+                bufferedWriter.write(cleanLine + "\n\n");
             }
-
         }
         bufferedWriter.close();
         bufferedReader.close();
