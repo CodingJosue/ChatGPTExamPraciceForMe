@@ -11,12 +11,13 @@ public class ExcercisesaArrays {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int[][] arrays = {
-                {1,2,3},
-                {1,2,3},
-                {1,2,3}
+                {0,1,2},
+                {0,1,2},
+                {0,1,2}
         };
-        xPattern(arrays);
-        reverseTopLeftToBottomRightPattern(arrays);
+        //xPattern(arrays);
+      //  reverseTopLeftToBottomRightPattern(arrays);
+        leftTopBottomRight(arrays);
     }
 
     public static int generateRANDOM(){
@@ -92,6 +93,21 @@ public class ExcercisesaArrays {
                 } else {
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+    }
+    public static void leftTopBottomRight(int[][] arrays){
+        for(int i = 0; i < arrays.length; i++){
+            for(int j = 0; j <arrays[i] .length; j++){
+                 if((i + j) == arrays[i].length - 1) System.out.print(arrays[i][j]);
+                else {
+                    //if(j - 1 >= 0){
+                    for(int t = 0; t < j + 1; t++) {
+                        System.out.print(" ");
+                    }
+                    //}
+                 }
             }
             System.out.println();
         }
